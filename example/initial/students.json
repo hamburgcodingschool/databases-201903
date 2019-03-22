@@ -1,0 +1,28 @@
+  {
+    "firstName": "Jon",
+    "lastName": "Doe",
+    "email": "jon@doe.com",
+    "address": "123 Main St, Anytown",
+    "number": 0
+  }
+  {
+    "firstName": "Stefan",
+    "lastName": "Schmidt",
+    "email": "stefan@gmail.com",
+    "address": "Hauptstr. 1, 22679 Hamburg",
+    "number": 1
+  }
+  {
+    "firstName": "Anna",
+    "lastName": "Ahrends",
+    "email": "anna@hotmail.de",
+    "address": "Rödingsmarkt 4, 22089 Hamburg",
+    "number": 2
+  }
+  {
+    "firstName": "Michael",
+    "lastName": "Müller",
+    "email": "info@micha.me",
+    "address": "Borselstraße 7, 22765 Hamburg",
+    "number": 3
+  }
