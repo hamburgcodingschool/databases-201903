@@ -23,6 +23,46 @@ router.get('/student', (req, res) => {
 		})
 })
 
+router.put('/student/update', (req, res) => {
+	const query = req.query
+	const studentId = query.id
+	delete query['id']
+
+	Student.findByIdAndUpdate(studentId, query, {new:true})
+		.then(student => {
+			res.json({
+				confirmation: 'success',
+				data: student
+			})
+		})
+		.catch(err => {
+			res.json({
+				confirmation: 'fail',
+				data: err.message
+			})
+		})
+})
+
+router.delete('/student/remove', (req, res) => {
+	const query = req.query
+	const studentId = query.id
+
+	Student.findByIdAndRemove(studentId)
+		.then(data => {
+			res.json({
+				confirmation: 'success',
+				data: 'Student '+studentId+' successfully removed.'
+			})
+		})
+		.catch(err => {
+			res.json({
+				confirmation: 'fail',
+				data: err.message
+			})
+		})
+
+})
+
 router.get('/student/:id', (req, res) => {
 	const id = req.params.id
 
